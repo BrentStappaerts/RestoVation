@@ -3,6 +3,7 @@
 
 --Een branch aanmaken om in te werken
 >git branch naam
+>git branch --> om te kijken in welke branch je nu zit
 
 >git checkout naam --> om in u branch te beginnen werken.
 
@@ -13,14 +14,12 @@
 
 >git commit -m "tussen deze haakjes de commitmessage met wat je verandert hebt"
 
+--je branch pushen naar de master branch
+
 >git push origin branchnaam
 
---mergen met de master
+
 >checkout master --> nu ben je in de master aant werken
-
->git merge branchnaam master
-
-
 
 >git push --> voert je veranderingen door op github dit is definitief!
 
@@ -30,5 +29,12 @@
 en dan opnieuw 
 
 >git push
+
+--Als je branch niet meer up to date is
+
+>git merge branchnaam master
+
+--een branch deleten
+>git branch -D branchnaam
 
 
