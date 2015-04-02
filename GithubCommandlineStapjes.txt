@@ -21,6 +21,8 @@
 
 >checkout master --> nu ben je in de master aant werken
 
+>git merge branchnaam master
+
 >git push --> voert je veranderingen door op github dit is definitief!
 
 --> als git push niet lukt:
@@ -30,9 +32,9 @@ en dan opnieuw
 
 >git push
 
---Als je branch niet meer up to date is
 
->git merge branchnaam master
+
+
 
 --een branch deleten
 >git branch -D branchnaam
