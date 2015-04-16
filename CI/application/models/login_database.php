@@ -19,6 +19,8 @@ $query = $this->db->get();
 if ($query->num_rows() == 0) {
 
 // Query to insert data in database
+
+
 $this->db->insert('tbl_gebruikers', $data);
 if ($this->db->affected_rows() > 0) {
 return true;
@@ -31,10 +33,40 @@ return false;
 // Read data using username and password
 public function login($data) {
 
+	$username=$data['username'];
+	$password=$data['password'];
+
+$condition = "gebruikersnaam =" . "'" . $data['username'] . "'";
+$this->db->select('*');
+$this->db->from('tbl_gebruikers');
+$this->db->where($condition);
+
+
+$row_user=$this->db->get()->row();
+//array maken met results
+
+
+
+
+
+if (password_verify($password,$row_user->passwoord)) 
+{
+	
+	return true;
+
+
+}
+else 
+	{
+		return false;
+}
+
+/*
 $condition = "gebruikersnaam =" . "'" . $data['username'] . "' AND " . "passwoord =" . "'" . $data['password'] . "'";
 $this->db->select('*');
 $this->db->from('tbl_gebruikers');
 $this->db->where($condition);
+
 $this->db->limit(1);
 $query = $this->db->get();
 
@@ -43,6 +75,7 @@ return true;
 } else {
 return false;
 }
+*/
 }
 
 // Read data from database to show data in admin page

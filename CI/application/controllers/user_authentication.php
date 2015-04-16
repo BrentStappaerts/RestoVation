@@ -56,7 +56,9 @@ $data = array(
 'voornaam' => $this->input->post('surname'), //-
 'gebruikersnaam' => $this->input->post('username'),
 'email' => $this->input->post('email_value'),
-'passwoord' => $this->input->post('password')
+
+//passwoord beveiligen met bcrypt en standaard option van 10 
+'passwoord' => password_hash($this->input->post('password'), PASSWORD_BCRYPT)
 );
 
 $result = $this->login_database->registration_insert($data) ;
