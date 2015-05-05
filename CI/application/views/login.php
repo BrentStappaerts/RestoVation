@@ -9,7 +9,6 @@
 
 <div class="container">
     <form>
-
         <?php if (@$user_profile): ?>
         <h2><?=$user_profile['name']?></h2>
         <a href="<?=$user_profile['link']?>">View Profile</a>
