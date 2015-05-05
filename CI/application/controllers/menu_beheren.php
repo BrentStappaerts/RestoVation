@@ -5,6 +5,7 @@ parent::__construct();
 $this->load->database();
 $this->load->model('menu_database');
 }
+
 function add_dish()
 {
 // Including Validation Library
@@ -40,6 +41,11 @@ public function read_menu() {
 $this->data['posts'] = $this->menu_database->get_dishes(); // calling Post model method getPosts()
 $this->load->view('menu_page', $this->data); // load the view file , we are passing $data array to view file
  }
-
+   
+    <?php foreach($query as $post):?>
+     <ul>
+         <li><?php echo $post->gerechtnaam; echo $post->gerechttype; echo $post->gerechtprijs;?></li>
+      </ul>     
+     <?php endforeach;?> 
 }
 ?>

@@ -26,5 +26,6 @@
          <li><?php echo $post->gerechtnaam; echo $post->gerechttype; echo $post->gerechtprijs;?></li>
       </ul>     
      <?php endforeach;?>  
+     
 </body>
 </html>

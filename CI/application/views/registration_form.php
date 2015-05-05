@@ -18,20 +18,10 @@ echo form_label('Naam : ');
 echo form_input('naam');
 echo form_label('Voornaam : ');
 echo form_input('voornaam');
-echo form_label('Kies restaurantnaam : ');
+echo form_label('Gebruikersnaam: ');
 echo form_input('gebruikersnaam');
 
-echo form_label('Straat: ');
-echo form_input('straat');
 
-echo form_label('Huisnummer : ');
-echo form_input('huisnummer');
-
-echo form_label('Gemeente : ');
-echo form_input('gemeente');
-
-echo form_label('Telefoonnummer: ');
-echo form_input('telefoonnummer');
 
 echo "<div class='error_msg'>";
 if (isset($message_display)) {

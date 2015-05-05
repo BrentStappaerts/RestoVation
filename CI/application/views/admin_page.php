@@ -7,11 +7,11 @@
 <body>
 <div id="profile">
 <?php
-echo "Hello <b id='welcome'><i>" . $name . "</i> !</b>";
-echo "Welcome to Admin Page";
-echo "Your Username is " . $username;
-echo "Your Email is " . $email;
-echo "Your Password is " . $password;
+echo "Hello " . $name ."<br/>";
+echo "Welcome to Admin Page". "<br/>"; 
+echo "Your Username is " . $username. "<br/>";
+echo "Your Email is " . $email. "<br/>";
+echo "Your Password is " . $password. "<br/>";
 ?>
 <b id="logout"><a href="logout">Logout</a></b>
 </div>

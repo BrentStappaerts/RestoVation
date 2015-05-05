@@ -40,16 +40,11 @@ public function new_user_registration() {
 
 // Check validation for user input in SignUp form
 $this->form_validation->set_rules('voornaam', 'voornaam', 'trim|required|xss_clean'); //-
-
 $this->form_validation->set_rules('naam', 'naam', 'trim|required|xss_clean');
 $this->form_validation->set_rules('gebruikersnaam', 'gebruikersnaam', 'trim|required|xss_clean');
 $this->form_validation->set_rules('email_value', 'Email', 'trim|required|xss_clean');
 $this->form_validation->set_rules('passwoord', 'Passwoord', 'trim|required|xss_clean');
-$this->form_validation->set_rules('straat', 'straat', 'trim|required|xss_clean');
-$this->form_validation->set_rules('huisnummer', 'huisnummer', 'trim|required|xss_clean');
-$this->form_validation->set_rules('gemeente', 'gemeente', 'trim|required|xss_clean');
-$this->form_validation->set_rules('huisnummer', 'huisnummer', 'trim|required|xss_clean');
-$this->form_validation->set_rules('telefoonnummer', 'telefoonnummer', 'trim|required|xss_clean');
+
 
 
 
@@ -62,13 +57,9 @@ $data = array(
 'gebruikersnaam' => $this->input->post('gebruikersnaam'),
 'email' => $this->input->post('email_value'),
 
-'straat' => $this->input->post('straat'),
-'huisnummer' => $this->input->post('huisnummer'),
-'gemeente' => $this->input->post('gemeente'),
-'telefoonnummer' => $this->input->post('telefoonnummer'),
 
 //passwoord beveiligen met bcrypt en standaard option van 10 
-'passwoord' => password_hash($this->input->post('password'), PASSWORD_BCRYPT)
+'passwoord' => password_hash($this->input->post('passwoord'), PASSWORD_BCRYPT)
 );
 
 $result = $this->login_database->registration_insert($data) ;
