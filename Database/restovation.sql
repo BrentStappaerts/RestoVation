@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Machine: 127.0.0.1
--- Gegenereerd op: 02 apr 2015 om 21:19
+-- Gegenereerd op: 05 mei 2015 om 12:44
 -- Serverversie: 5.6.21
 -- PHP-versie: 5.6.3
 
@@ -46,8 +46,19 @@ CREATE TABLE IF NOT EXISTS `tbl_gebruikers` (
   `passwoord` varchar(300) COLLATE utf8_unicode_ci NOT NULL,
   `voornaam` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `naam` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `straat` varchar(80) COLLATE utf8_unicode_ci NOT NULL,
+  `huisnummer` int(5) NOT NULL,
+  `gemeente` varchar(80) COLLATE utf8_unicode_ci NOT NULL,
+  `telefoonnummer` varchar(45) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `tbl_gebruikers`
+--
+
+INSERT INTO `tbl_gebruikers` (`id`, `gebruikersnaam`, `passwoord`, `voornaam`, `naam`, `email`, `straat`, `huisnummer`, `gemeente`, `telefoonnummer`) VALUES
+(12, 'gans', '$2y$10$Pb.3p5fYv5fOP9aKbBMymekmAplc4qEsNYqKzA7sNND51o9Nk5Ije', 'qdfsfds', 'fqds', 't@gfqdfsdsf.com', 'fqds', 12, 'fdssqdf', '01546465');
 
 -- --------------------------------------------------------
 
@@ -157,7 +168,7 @@ ALTER TABLE `tbl_tafels`
 -- AUTO_INCREMENT voor een tabel `tbl_gebruikers`
 --
 ALTER TABLE `tbl_gebruikers`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT voor een tabel `tbl_menu`
 --
