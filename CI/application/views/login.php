@@ -11,6 +11,7 @@
     <form>
 
         <?php if (@$user_profile): ?>
+        <img class="img-rounded" src="https://graph.facebook.com/<?php echo $_SESSION['FBID']; ?>/picture"> <?php echo $_SESSION['FULLNAME']; ?>
         <h2><?=$user_profile['name']?></h2>
         <a href="<?=$user_profile['link']?>">View Profile</a>
         <a href="<?= $logout_url ?>">Logout</a> 
