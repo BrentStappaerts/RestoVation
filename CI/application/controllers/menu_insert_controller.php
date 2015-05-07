@@ -1,4 +1,4 @@
-<?php
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 class menu_insert_controller extends CI_Controller {
     
 function __Construct(){
