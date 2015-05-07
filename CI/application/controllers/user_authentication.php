@@ -105,6 +105,7 @@ $data = array(
 'username' =>$result[0]->gebruikersnaam,
 'email' =>$result[0]->email,
 'password' =>$result[0]->passwoord
+'id' =>$result[0]->id
 );
 $this->load->view('admin_page', $data);
 }
