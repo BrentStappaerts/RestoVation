@@ -12,6 +12,8 @@ echo "Welcome to Admin Page". "<br/>";
 echo "Your Username is " . $username. "<br/>";
 echo "Your Email is " . $email. "<br/>";
 echo "Your Password is " . $password. "<br/>";
+echo "Your ID is " . $id. "<br/>";
+Print_r($_SESSION);
 ?>
 <b id="logout"><a href="logout">Logout</a></b>
 </div>
