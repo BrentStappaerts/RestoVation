@@ -1,13 +1,14 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
-class menu_insert_controller extends CI_Controller {
+class menu extends CI_Controller {
     
 function __Construct(){
 parent::__Construct ();
    $this->load->database(); // load database
-   $this->load->model('menu_insert_model'); // load model
+   $this->load->model('menu_model'); // load model
 }
-    
-function add_dish()
+ 
+
+function addDish()
 {
     // Including Validation Library
     $this->load->library('form_validation');
@@ -21,7 +22,7 @@ function add_dish()
     
 if ($this->form_validation->run() == FALSE)
 {
-    $this->load->view('menu_insert_view');
+    $this->load->view('menu/menu_insert');
 }
 else
 {
@@ -32,11 +33,17 @@ else
     'gerechtprijs' => $this->input->post('db_prijs')
     );
     // Transfering Data To Model
-    $this->menu_insert_model->form_insert($data);
+    $this->menu_model->formInsert($data);
     // Loading View
-    $this->load->view('menu_insert_view');
+    $this->load->view('menu/menu_insert');
 }
-}
+}    
 
+function allRecords()
+{
+    $this->load->model("menu_model");
+    $data['records'] = $this->menu_model->getAllRecords();
+    $this->load->view("menu/menu_read", $data);
+}
 }
 ?>

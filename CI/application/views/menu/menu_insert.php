@@ -7,7 +7,7 @@
     <meta name="keywords" content="">
 </head>
 <body>
-    <?php echo form_open('menu_insert_controller/add_dish'); ?>
+    <?php echo form_open('menu/adddish'); ?>
     <h1>Voeg een gerecht toe</h1>
     <?php echo form_label('Naam gerecht'); ?> <?php echo form_error('db_naam_gerecht'); ?>
     <?php echo form_input(array('id' => 'db_naam_gerecht', 'name' => 'db_naam_gerecht')); ?>
