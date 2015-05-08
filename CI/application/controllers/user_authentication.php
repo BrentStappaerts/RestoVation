@@ -104,7 +104,7 @@ $data = array(
 'surname' =>$result[0]->voornaam,
 'username' =>$result[0]->gebruikersnaam,
 'email' =>$result[0]->email,
-'password' =>$result[0]->passwoord
+'password' =>$result[0]->passwoord,
 'id' =>$result[0]->id
 );
 $this->session->set_userdata('logged_in', $sess_array);

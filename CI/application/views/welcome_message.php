@@ -3,9 +3,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
+
 	<meta charset="utf-8">
 	<title>Welcome to CodeIgniter</title>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<style type="text/css">
 
 	::selection { background-color: #E13300; color: white; }
@@ -66,6 +67,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</style>
 </head>
 <body>
+<!-- Deze code bovenaan body plakken. Zie dat bootstrap gelinked is in de view -->
+<?php 
+ if($this->session->userdata('logged_in'))
+   {
+     
+     include_once('MainNav.php');//Als admin ingelogged is deze menu tonen.
+   
+   }
+   else
+   {
+     include_once('MainNav.php');//als niet ingelogged zijn inlog navigatie tonen.
+     
+   }
+ ?>
+ <!-- Navigatie code tot hier -->
 
 <div id="container">
 	<h1>Welcome to CodeIgniter!</h1>
