@@ -5,8 +5,24 @@
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta name="keywords" content="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 </head>
 <body>
+<!-- Deze code bovenaan body plakken. Zie dat bootstrap gelinked is in de view -->
+<?php 
+ if($this->session->userdata('logged_in'))
+   {
+     
+     include_once('MainNav.php');//Als admin ingelogged is deze menu tonen.
+   
+   }
+   else
+   {
+     include_once('MainNav.php');//als niet ingelogged zijn inlog navigatie tonen.
+     
+   }
+ ?>
+ <!-- Navigatie code tot hier -->
     <?php echo form_open('restaurant_toevoegen_controller/voeg_toe'); ?>
     <h1>Crëeer een nieuw restaurant.</h1>
     <?php echo form_label('Naam restaurant'); ?> <?php echo form_error('db_restaurantnaam'); ?>
