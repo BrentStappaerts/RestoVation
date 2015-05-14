@@ -656,7 +656,7 @@ class CI_Security {
 					{
 						$_entities[':'] = '&colon;';
 						$_entities['('] = '&lpar;';
-						$_entities[')'] = '&rpar;';
+						$_entities[')'] = '&rpar';
 						$_entities["\n"] = '&newline;';
 						$_entities["\t"] = '&tab;';
 					}
@@ -664,11 +664,11 @@ class CI_Security {
 
 				$replace = array();
 				$matches = array_unique(array_map('strtolower', $matches[0]));
-				foreach ($matches as &$match)
+				for ($i = 0, $c = count($matches); $i < $c; $i++)
 				{
-					if (($char = array_search($match.';', $_entities, TRUE)) !== FALSE)
+					if (($char = array_search($matches[$i].';', $_entities, TRUE)) !== FALSE)
 					{
-						$replace[$match] = $char;
+						$replace[$matches[$i]] = $char;
 					}
 				}
 
@@ -772,7 +772,7 @@ class CI_Security {
 	 */
 	protected function _remove_evil_attributes($str, $is_image)
 	{
-		$evil_attributes = array('on\w*', 'style', 'xmlns', 'formaction', 'form', 'xlink:href', 'FSCommand', 'seekSegmentTime');
+		$evil_attributes = array('on\w*', 'style', 'xmlns', 'formaction', 'form', 'xlink:href');
 
 		if ($is_image === TRUE)
 		{

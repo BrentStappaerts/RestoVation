@@ -94,7 +94,10 @@ class CI_Session {
 			$this->_driver = 'database';
 		}
 
-		$class = $this->_ci_load_classes($this->_driver);
+		if (($class = $this->_ci_load_classes($this->_driver)) === FALSE)
+		{
+			return;
+		}
 
 		// Configuration ...
 		$this->_configure($params);
@@ -227,7 +230,8 @@ class CI_Session {
 
 			if ( ! class_exists('CI_'.$class, FALSE) && ! class_exists($class, FALSE))
 			{
-				throw new UnexpectedValueException("Session: Configured driver '".$driver."' was not found. Aborting.");
+				log_message('error', "Session: Configured driver '".$driver."' was not found. Aborting.");
+				return FALSE;
 			}
 		}
 
@@ -869,7 +873,7 @@ class CI_Session {
 	public function set_tempdata($data, $value = NULL, $ttl = 300)
 	{
 		$this->set_userdata($data, $value);
-		$this->mark_as_temp(is_array($data) ? array_keys($data) : $data, $ttl);
+		$this->mark_as_temp($data, $ttl);
 	}
 
 	// ------------------------------------------------------------------------
