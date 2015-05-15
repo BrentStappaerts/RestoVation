@@ -39,7 +39,7 @@ else
 }
 }    
 
-function allRecords()
+function index()
 {
     $this->load->model("menu_model");
     $data['records'] = $this->menu_model->getAllRecords();
