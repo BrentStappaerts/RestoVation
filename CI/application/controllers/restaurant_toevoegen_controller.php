@@ -39,7 +39,7 @@ else
     'gemeente' => $this->input->post('db_gemeente'),
     'postcode' => $this->input->post('db_postcode'),
     'telefoonnummer' => $this->input->post('db_telefoonnummer'),
-    'id'=>$this->session->userdata('id')
+    'id'=>$_SESSION['id']
      );
     // Transfering Data To Model
     $this->restaurant_toevoegen_model->form_insert($data);

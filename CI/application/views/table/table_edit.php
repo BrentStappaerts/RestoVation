@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta name="keywords" content="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 <style type="text/css">
 #infoMessage p{
 	padding: .8em;
@@ -19,6 +20,22 @@
 </head>
 
 <body>
+<!-- Deze code bovenaan body plakken. Zie dat bootstrap gelinked is in de view -->
+
+<?php 
+ if(null !==($this->session->userdata('logged_in')))
+   {
+     
+     include_once(APPPATH.'/views/AdminNav.php');//Als admin ingelogged is deze menu tonen.
+   
+   }
+   else
+   {
+     include_once(APPPATH.'/views/MainNav.php');//als niet ingelogged zijn inlog navigatie tonen.
+     
+   }
+ ?>
+ <!-- Navigatie code tot hier -->
 <h2>Tafel bewerken</h2>
 <div id="infoMessage"><?php echo $message;?></div>
 

@@ -107,7 +107,9 @@ $data = array(
 'password' =>$result[0]->passwoord,
 'id' =>$result[0]->id
 );
-$this->session->set_userdata('logged_in', $sess_array);
+
+
+$this->session->set_userdata('logged_in', $data);
 $this->load->view('admin_page', $data);
 }
 }else{

@@ -6,16 +6,17 @@
 </head>
 <body>
 <!-- Deze code bovenaan body plakken. Zie dat bootstrap gelinked is in de view -->
+
 <?php 
- if($this->session->userdata('logged_in'))
+ if(null !==($this->session->userdata('logged_in')))
    {
      
-     include_once('MainNav.php');//Als admin ingelogged is deze menu tonen.
+     include_once(APPPATH.'/views/AdminNav.php');//Als admin ingelogged is deze menu tonen.
    
    }
    else
    {
-     include_once('MainNav.php');//als niet ingelogged zijn inlog navigatie tonen.
+     include_once(APPPATH.'/views/MainNav.php');//als niet ingelogged zijn inlog navigatie tonen.
      
    }
  ?>
