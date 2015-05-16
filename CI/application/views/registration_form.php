@@ -2,7 +2,6 @@
 <head>
 <title>Registration Form</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<link rel="stylesheet" href="../resources/css/styles.css" type="text/css">
 
 </head>
 <body>

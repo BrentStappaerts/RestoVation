@@ -6,7 +6,6 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../resources/css/styles.css" type="text/css">
 <style>
 table, td, th
 {

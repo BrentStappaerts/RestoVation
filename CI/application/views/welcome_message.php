@@ -7,7 +7,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<meta charset="utf-8">
 	<title>Welcome to CodeIgniter</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<link rel="stylesheet" href="../resources/css/styles.css" type="text/css">
 	<style type="text/css">
 
 	::selection { background-color: #E13300; color: white; }

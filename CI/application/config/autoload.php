@@ -1,7 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-
 /*
 | -------------------------------------------------------------------
 | AUTO-LOADER
@@ -142,5 +141,3 @@ $autoload['model'] = array();
 
 // autoload voor database
 
-
-$autoload['helper'] = array('url');

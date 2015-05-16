@@ -1,15 +1,8 @@
-<!--
-<?php
-	include_once(APPPATH. 'resources/css/styles.css');
-?>
--->
 <html>
 <head>
 <title>Login Form</title>
-<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/stylesheets/styles.css"/>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans+Condensed:300|Raleway' rel='stylesheet' type='text/css'/>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans+Condensed:300|Raleway' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
@@ -60,7 +53,7 @@ echo "</div>";
 <label>Password :</label>
 <input type="password" name="password" id="password" placeholder="**********"/>
 <input type="submit" value=" Login " name="submit"/>
-<a href="user_registration_show">To Sign Up Click Here</a>
+<a href="user_registration_show">To SignUp Click Here</a>
 <?php echo form_close(); ?>
 </div>
 </div>
