@@ -1,0 +1,93 @@
+/*superElement for background-color*/
+
+
+/*Navigation bar*/
+#firstAnch
+{
+	margin-left: 25px;
+}
+
+.span12
+{
+	margin-bottom: 25px;
+	max-width: 100%;
+	background-color: white;
+}
+
+
+
+/*throw msg*/
+.error_msg
+{   
+	max-width: 350px;
+	margin-left: auto;
+	margin-right: auto;
+	
+	padding:15px 10px 15px 15px;
+	
+	color: #D8000C;
+	background-color: #FFBABA;
+	border: 1px solid;
+	border-color: #D8000C;
+
+	text-align: center;
+}
+
+/*Login/Signup forms*/
+#main 
+{
+	
+	display: block;
+	
+	max-width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+	
+	
+}
+
+#login
+{
+	border: 1px solid;
+	border-color: #ecf0f1;
+	max-width: 400px;
+	border-radius: 7.5px;
+	
+	margin-left: auto;
+	margin-right: auto;
+	
+	padding-left: 30px;
+	padding-right: 30px;
+	
+	padding-bottom: 15px;
+	
+	background-color: #ecf0f1;
+}
+
+#login input 
+{
+	float: right;
+	height: 27px;
+	outline: none;
+	border: 1px solid #ddd;
+	padding: 0 10px;
+	border-radius: 2px;
+}
+
+#login button
+{
+	float: right;
+	height: 30px;
+	outline: none;
+	border: 1px solid #ddd;
+	padding: 0 10px;
+	border-radius: 2px;
+}
+
+#login button:hover
+{
+	background-color: blueviolet;
+	color: white;
+}
+
+

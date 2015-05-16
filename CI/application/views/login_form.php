@@ -1,10 +1,12 @@
 <html>
 <head>
-<title>Login Form</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans+Condensed:300|Raleway' rel='stylesheet' type='text/css'>
+<title>Log in</title>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/stylesheets/styles.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans+Condensed:300|Raleway' rel='stylesheet' type='text/css'/>
+
 </head>
-<body>
+<body style="background-color: #9b59b6; !important">
 
 <!-- Deze code bovenaan body plakken. Zie dat bootstrap gelinked is in de view -->
 <?php 
@@ -38,22 +40,31 @@ echo "</div>";
 ?>
 <div id="main">
 <div id="login">
-<h2>Login Form</h2>
+<h2>Inloggen:</h2>
 <?php echo form_open('user_authentication/user_login_process'); ?>
 <?php
-echo "<div class='error_msg'>";
 if (isset($error_message)) {
-echo $error_message;
+	echo "<div class='error_msg'>";
+	echo $error_message;
+	echo validation_errors();
+	echo "</div>";
+	echo "<br>";
 }
-echo validation_errors();
-echo "</div>";
+
 ?>
-<label>UserName :</label>
-<input type="text" name="username" id="name" placeholder="username"/>
-<label>Password :</label>
-<input type="password" name="password" id="password" placeholder="**********"/>
-<input type="submit" value=" Login " name="submit"/>
-<a href="user_registration_show">To SignUp Click Here</a>
+<form action="">
+<label>Gebruikersnaam:</label>
+<input type="text" name="username" id="name" placeholder="Gebruikersnaam" required/>
+<br>
+<br>
+<label>Wachtwoord:</label>
+<input type="password" name="password" id="password" placeholder="**********" required/>
+<br>
+<br>
+<button type="submit" value=" Login " name="submit">Log in</button>
+<span>Nog geen account? <a href="user_registration_show">Registreer</a> je hier</span>
+</form>
+
 <?php echo form_close(); ?>
 </div>
 </div>
