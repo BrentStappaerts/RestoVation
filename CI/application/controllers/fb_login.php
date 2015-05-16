@@ -44,7 +44,7 @@ class fb_login extends CI_Controller {
                 'scope' => array("email") // permissions here
             ));
         }
-        $this->load->view('login',$data);
+        $this->load->view('login', $data);
 
  }
 

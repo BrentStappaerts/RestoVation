@@ -33,6 +33,22 @@
 	text-align: center;
 }
 
+.message
+{
+	max-width: 350px;
+	margin-left: auto;
+	margin-right: auto;
+	
+	padding:15px 10px 15px 15px;
+	
+	color: #4F8A10;
+	background-color: #DFF2BF;
+	border: 1px solid;
+	border-color: #4F8A10;
+
+	text-align: center;
+}
+
 /*Login/Signup forms*/
 #main 
 {
@@ -74,7 +90,22 @@
 	border-radius: 2px;
 }
 
+#login input:focus
+{
+	border: 1px solid #9b59b6;
+}
+
 #login button
+{
+	float: right;
+	height: 30px;
+	outline: none;
+	border: 1px solid #ddd;
+	padding: 0 10px;
+	border-radius: 2px;
+}
+
+#register_btn
 {
 	float: right;
 	height: 30px;

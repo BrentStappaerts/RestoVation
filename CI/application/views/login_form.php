@@ -36,6 +36,8 @@ if (isset($message_display)) {
 echo "<div class='message'>";
 echo $message_display;
 echo "</div>";
+echo "<br>";
+echo "<br>";
 }
 ?>
 <div id="main">
@@ -48,6 +50,7 @@ if (isset($error_message)) {
 	echo $error_message;
 	echo validation_errors();
 	echo "</div>";
+	echo "<br>";
 	echo "<br>";
 }
 

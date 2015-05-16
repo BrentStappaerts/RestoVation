@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="../resources/css/styles.css" type="text/css">
 
 </head>
-<body>
+<body style="background-color: #9b59b6; !important">
 <!-- Deze code bovenaan body plakken. Zie dat bootstrap gelinked is in de view -->
 
 <?php 
@@ -25,7 +25,7 @@
  <!-- Navigatie code tot hier -->
 <div id="main">
 <div id="login">
-<h2>Registration Form</h2>
+<h2>Registreren:</h2>
 
 <?php
 if (isset($message_display)) {
@@ -33,15 +33,22 @@ echo "<div class='error_msg'>";
 echo $message_display;
 echo validation_errors();
 echo "</div>";
+echo "<br>";
 };
 echo form_open('user_authentication/new_user_registration');
 
 	echo form_label('Naam: ');
 	echo form_input('naam');
+	echo "<br>";
+	echo "<br>";
 	echo form_label('Voornaam: ');
 	echo form_input('voornaam');
+	echo "<br>";
+	echo "<br>";
 	echo form_label('Gebruikersnaam: ');
 	echo form_input('gebruikersnaam');
+	echo "<br>";
+	echo "<br>";
 	echo form_label('Email: ');
 
 	$data = array(
@@ -50,9 +57,23 @@ echo form_open('user_authentication/new_user_registration');
 	);
 
 	echo form_input($data);
+	echo "<br>";
+	echo "<br>";
 	echo form_label('Passwoord: ');
 	echo form_password('passwoord');
-	echo form_submit('submit', 'Sign Up');
+	echo "<br>";
+	echo "<br>";
+
+	$register_btn = array(
+	'type'=>'submit',
+	'id'=>'register_btn',
+	'name'=>'submit',
+	'value'=>'Sign Up',
+	'content'=>'Sign up'
+	);
+
+	echo form_button($register_btn);
+	echo "<span>Al een account? <a href='user_login_show'>Log in</a></span>";
 	echo form_close();
 ?>
 </div>
