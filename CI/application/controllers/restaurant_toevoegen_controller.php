@@ -4,6 +4,8 @@ class restaurant_toevoegen_controller extends CI_Controller {
 function __Construct(){
 parent::__Construct ();
    $this->load->database(); // load database
+   // Load session library
+$this->load->library('session');
    $this->load->model('restaurant_toevoegen_model'); // load model
 $this->load->model('login_database'); //voor sessiedata
 }
@@ -39,7 +41,7 @@ else
     'gemeente' => $this->input->post('db_gemeente'),
     'postcode' => $this->input->post('db_postcode'),
     'telefoonnummer' => $this->input->post('db_telefoonnummer'),
-    'id'=>$_SESSION['id']
+    'id'=>$this->session->userdata('logged_in')['id']
      );
     // Transfering Data To Model
     $this->restaurant_toevoegen_model->form_insert($data);
@@ -47,6 +49,14 @@ else
     $this->load->view('restaurant_toevoegen_view');
 }
 }
+public function index()
+    {
+        $this->data['restos'] = $this->restaurant_toevoegen_model->getAll();
+        $this->data['title'] = 'Tafel Management';
+        
+        
+        $this->load->view('RestoEdit', $this->data);
+    }
 
 }
 ?>

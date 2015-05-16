@@ -25,15 +25,14 @@
  
 <div id="profile">
 <?php
-echo "Hello " . $name ."<br/>";
-echo "Welcome to Admin Page". "<br/>"; 
-echo "Your Username is " . $username. "<br/>";
-echo "Your Email is " . $email. "<br/>";
-echo "Your Password is " . $password. "<br/>";
-echo "Your ID is " . $id. "<br/>";
-Print_r($_SESSION);
+echo "<p>Hallo " . $name ."</p>";
+echo "<p>Welkom bij restovation!". "</p>"; 
+echo "<p>Gebruik bovenstaande menu om je restaurant te beheren.". "</p>"; 
+echo "<p>Bewerk je menu.". "</p>"; 
+echo "<p>Beheer je tafelbezetting,...". "</p>"; 
+
 ?>
-<b id="logout"><a href="logout">Logout</a></b>
+<b id="logout"><a href="logout">Klik hier om uit te loggen.</a></b>
 </div>
 </body>
 </html>

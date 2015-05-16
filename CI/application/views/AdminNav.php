@@ -11,10 +11,10 @@ $this->load->helper('url');
 
 
             <li> <a href="<?php echo site_url("user_authentication/user_login_show");?>">Home</a></li>
-          	<li> <a href="<?php echo site_url("menu/index");?>">Menu Beheren</a></li>
+          	<li> <a href="<?php echo site_url("menu/addDish");?>">Menu Beheren</a></li>
           	<li> <a href="<?php echo site_url("restaurant_toevoegen_controller/voeg_toe");?>">Restaurant Beheren</a></li>
           	<li> <a href="<?php echo site_url("tables/index");?>">Tafels Beheren</a></li>
-            <li> <a href="<?php echo site_url("user_authentication/user_login_show");?>">Profiel</a></li>
+            <li> <a href="<?php echo site_url("restaurant_toevoegen_controller/index");?>">Profiel</a></li>
             <li> <a href="<?php echo site_url("user_authentication/Logout");?>">Logout</a></li>
             <div id="profile">
 

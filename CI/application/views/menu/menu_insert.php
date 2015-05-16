@@ -37,8 +37,6 @@
     <?php echo form_input(array('id' => 'db_prijs', 'name' => 'db_prijs')); ?>
     
     <?php echo form_submit(array('id' => 'submit', 'value' => 'Toevoegen'));?>
-    <?php echo form_close(); ?> 
-    
-    <input type="button" name="btnBck" id="btnBck" value="Terug" onclick="window.location.href='<?php echo base_url() ?>index.php/menu/index'"/> 
+    <?php echo form_close(); ?>  
 </body>
 </html>

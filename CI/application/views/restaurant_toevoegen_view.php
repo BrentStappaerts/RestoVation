@@ -43,5 +43,9 @@
     
     <?php echo form_submit(array('id' => 'submit', 'value' => 'Toevoegen'));?>
     <?php echo form_close(); ?>  
+
+ 
+   <a href="<?php echo site_url("restaurant_toevoegen_controller/index");?>">Restaurants Bekijken</a>
+
 </body>
 </html>

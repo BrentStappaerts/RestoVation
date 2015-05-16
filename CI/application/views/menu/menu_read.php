@@ -40,8 +40,6 @@
         </tr>
     <?php endforeach;?>
     </table>
-    
-    <input type="button" name="btnAdd" id="btnAdd" value="Gerecht toevoegen" onclick="window.location.href='<?php echo base_url() ?>index.php/menu/adddish'"/>
  
 </body>
 </html>
