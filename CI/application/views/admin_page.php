@@ -4,6 +4,7 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans+Condensed:300|Raleway' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="../resources/css/styles.css" type="text/css">
 </head>
 <body>
 <!-- Deze code bovenaan body plakken. Zie dat bootstrap gelinked is in de view -->

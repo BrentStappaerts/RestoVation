@@ -9,7 +9,7 @@ $this->load->helper('url');
      <ul class="nav nav-tabs"> 
 
        
-          	<li> <a href="<?php echo site_url("fb_login/login");?>">home</a></li>
+          	<li> <a id="firstAnch" href="<?php echo site_url("fb_login/login");?>">home</a></li>
             <li> <a href="<?php echo site_url("fb_login/login");?>">Klant login</a></li>
             <li> <a href="<?php echo site_url("user_authentication/user_login_show");?>">Restaurant login</a></li>
 
