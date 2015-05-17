@@ -5,8 +5,10 @@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/stylesheets/styles.css"/>
+<link href='http://fonts.googleapis.com/css?family=Berkshire+Swash&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
 <style>
-  body {background-color:lightgray}
+  body {background-color: #9b59b6;}
 
   #reserveren {background-color: #808080;
                 padding: 10px;}
@@ -19,7 +21,7 @@
 </style>
 </head>
 
-<body>
+<body id="landingBody">
 <!-- Deze code bovenaan body plakken. Zie dat bootstrap gelinked is in de view -->
 
 <?php 
@@ -80,9 +82,31 @@
             </form>
 
         <?php else: ?>
-        <h2>Reserveer een tafel of 2.</h2>hh
-        <h3>Login met Facebook</h3>
-        <a href="<?= $login_url ?>">Login</a> 
+        <div id="landing">
+			<div id="wrapper">
+			<h1>RestoVation</h1>
+			</div>
+			<div id="wrapper_Wrapper">
+			<h2>Reserveren en dineren met enkele klikken.</h2>
+				<p>U wilt lekker uit eten vanavond maar uitpluizen welk restaurant in de buurt nog beschikbare tafels of reservaties heeft vindt u maar een lastig karwei?</p>
+				<p><b>RestoVation</b> is een nieuwe dienst die je gemakkelijk toelaat eetgelegenheden te zoeken, online reserveren en via je mobiele telefoon bestellingen en gerechten door te geven. Zo is alles klaar wanneer je aankomt bij je eetgelegenheid.</p>
+			<ul>
+				<li>Online zoeken van restaurants/tavernes in u buurt.</li>
+				<li>Gemakkelijk de beschikbare tafels controleren en reserveren.</li>
+				<li>Bestel u gerecht online, kom aan wanneer het klaar is.</li>
+				<li>Slaag uw favoriete restaurants op onder uw favorieten.</li>
+				<li>Lees recencies, geef waarderingen en help de rest naar een lekkere hap!</li>
+			</ul>			
+			<p>Voor het gebruik van RestoVation heeft u een account nodig. Dat kan gemakkelijk via Facebook.</p>
+			<br>
+			<div id="fbLandingLogin">
+			<a href="<?= $login_url ?>">Log in met Facebook</a>
+			</div>
+			<h2>Eet smakelijk!</h3>
+			
+     		<p style="font-size: 0.799em";>Voor onze diensten voor restauranthouders of om in te loggen als restauranthouder, <a href="">klik</a> hier.<p>
+      </div>
+       </div>
         <?php endif; ?>
     </form>
 </div>

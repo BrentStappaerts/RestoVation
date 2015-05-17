@@ -121,4 +121,135 @@
 	color: white;
 }
 
+#landingBody
+{
+	background-image: url(../images/image1.png);
+	overflow: hidden;
+	
+	background-size: auto;
+	background-repeat: no-repeat;
+	
+	z-index: 999;
+}
 
+#wrapper h1
+{
+	color: white;
+	padding: 7.5px;
+/*	background-image: url(../images/transparentbg.png);*/
+	
+	font-family: 'Berkshire Swash', cursive;
+	
+	max-width: 5.9em;
+	
+	font-size: 4.33em;
+}
+
+#wrapper
+{	
+	display: inline-block;
+	max-width: 400px;
+	margin-left: -25;
+	margin-right: auto;
+	
+	margin-top: 275px;
+	
+	float: left;
+}
+
+#wrapper_Wrapper
+{
+	display: inline-block;
+	background-image: url(../images/transparentbgwhite2.png);
+	
+	min-width: 525px;
+	max-width: 525px;
+	
+	margin-top: 50px;
+	
+	margin-left: auto;
+	margin-right: -75;
+	padding-left: 7.5px;
+	padding-right: 7.5px;
+	
+	padding-top: -5px;
+	
+	float: right;
+}
+
+#wrapper_Wrapper h2
+{
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	text-align: center;
+	
+	font-weight: bold;
+}
+
+#wrapper_Wrapper p
+{
+/*	text-align: center;*/
+	font-size: 1.15em;
+	
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+#wrapper_Wrapper li
+{
+	
+	font-size: 1.65em;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+/*	list-style: none;*/
+	margin-right: 15px;
+}
+
+#wrapper_Wrapper span
+{
+	font-weight: bold;
+}
+
+/*
+#fbLandingLogin
+{
+	width: 200px;
+	height: 40px;
+	background-color: dodgerblue;
+}
+
+#fbLandingLogin
+{
+	text-align: center;
+}
+*/
+
+#fbLandingLogin {
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 19px;
+  background-image: url(../images/fbBtn.png);
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+	width: 280px;
+	
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#fbLandingLogin:hover {
+  background: #3cb0fd;
+  background-image: url(../images/fbBtn_press.png);
+/*
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+*/
+  text-decoration: none;
+}
+
+#fbLandingLogin a
+{
+	color: white;
+	margin-left: 55px;
+}
+}

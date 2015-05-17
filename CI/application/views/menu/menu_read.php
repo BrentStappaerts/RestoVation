@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Menu</title>
+    <title>Menu Uitlezen</title>
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta name="keywords" content="">
@@ -41,7 +41,6 @@
         </tr>
     <?php endforeach;?>
     </table>
-    <input type="button" name="btnAdd" id="btnAdd" value="Gerecht toevoegen" onclick="window.location.href='<?php echo base_url() ?>index.php/menu/adddish'"/>
  
 </body>
 </html>
