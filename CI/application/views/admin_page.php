@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/stylesheets/styles.css"/>
 </head>
-<body>
+<body id="landingBody">
 <!-- Deze code bovenaan body plakken. Zie dat bootstrap gelinked is in de view -->
 
 <?php 
@@ -26,7 +26,7 @@
  
 <div id="profile">
 <?php
-echo "<p>Hallo " . $name ."</p>";
+echo "<p>Hallo, " .$name ."</p>";
 echo "<p>Welkom bij restovation!". "</p>"; 
 echo "<p>Gebruik bovenstaande menu om je restaurant te beheren.". "</p>"; 
 echo "<p>Bewerk je menu.". "</p>"; 

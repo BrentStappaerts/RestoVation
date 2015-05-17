@@ -76,7 +76,7 @@
 
 
             <div id="reserveren">
-                <a href="<? $reserveer_url ?>">Reserveren</a>
+                <a href="<?= $reserveer_url ?>">Reserveren</a>
                 <!--DIT IS DE ORIGINELE LINK, BOVENSTAANDE WAS VOOR CSS STYLING-->
 <!--                <a href="<?= $reserveer_url ?>">Reserveren</a>-->
                 <a href="http://www.igenerate.be">Reservatie bekijken</a>
@@ -105,6 +105,7 @@
                  </div> end padding 
             </form>
 -->
+        	</div>
 
         <?php else: ?>
         <div id="landing">

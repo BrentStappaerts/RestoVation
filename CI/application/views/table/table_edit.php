@@ -6,6 +6,9 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/stylesheets/styles.css"/>
+	<link href='http://fonts.googleapis.com/css?family=Berkshire+Swash&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
 <style type="text/css">
 #infoMessage p{
 	padding: .8em;
@@ -19,7 +22,7 @@
 </style>
 </head>
 
-<body>
+<body id="landingBody">
 <!-- Deze code bovenaan body plakken. Zie dat bootstrap gelinked is in de view -->
 
 <?php 

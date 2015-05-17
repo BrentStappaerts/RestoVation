@@ -7,6 +7,23 @@
 	margin-left: 25px;
 }
 
+#lastAnch
+{
+	float: right;
+	margin-right: 25px;
+	background-color: #16a085;	
+}
+
+#lastAnch a
+{
+	color: white;
+}
+
+#lastAnch a:hover
+{
+	color: black;
+}
+
 .span12
 {
 	margin-bottom: 25px;
@@ -287,3 +304,67 @@
 	margin-right: 5px;
 }
 
+
+
+
+.dashContainer
+{
+/*	background-image: url(../images/transparentbgwhite2.png);*/
+	
+	background-color: white;
+	border-radius: 6px;
+	
+	min-width: 750px;
+	max-width: 750px;
+	
+	margin-left: auto;
+	margin-right: auto;
+	
+	padding-left: 15px;
+	padding-right: 15px;
+	
+	padding-top: 0px;
+	
+}
+
+#dashContainer1
+{
+	height: 350px; 
+}
+
+.dashContainer h2
+{
+	display: inline-block;
+	font-family: 'Berkshire Swash', cursive;
+	color: black;
+	font-size: 2.33em;
+	
+	padding-top: 5px;
+}
+
+.dashContainer button
+{
+	float: right;
+	display: inline-block;
+	margin-top: 30px;
+	
+	height: 30px;
+	width: 160px;
+}
+
+.dashContainer button:hover
+{
+	background-color: #16a085;
+	color: white;
+	border-style: none;
+}
+
+
+.dashContainer table
+{
+	margin-left: 40px;
+	margin-right: auto;
+	
+	margin-bottom: 20px;
+	width: 700px;
+}

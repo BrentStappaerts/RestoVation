@@ -6,7 +6,9 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../resources/css/styles.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/stylesheets/styles.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans+Condensed:300|Raleway' rel='stylesheet' type='text/css'/>
 </head>
 <body>
 <!-- Deze code bovenaan body plakken. Zie dat bootstrap gelinked is in de view -->

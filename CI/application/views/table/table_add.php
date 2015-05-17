@@ -6,8 +6,11 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/stylesheets/styles.css"/>
+<link href='http://fonts.googleapis.com/css?family=Berkshire+Swash&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
 </head>
-<body>
+<body id="landingBody">
 <!-- Deze code bovenaan body plakken. Zie dat bootstrap gelinked is in de view -->
 
 <?php 
@@ -24,6 +27,7 @@
    }
  ?>
  <!-- Navigatie code tot hier -->
+ <div id="dashContainer1" class="dashCont">
 <h2>Tafels toevoegen</h2>
 <div id="infoMessage"><?php echo $message;?></div>
 <?php echo form_open("tables/addtable");?>
@@ -43,7 +47,9 @@
 				<input type="button" name="btnBack" id="btnBack" value="Terug" onclick="window.location.href='<?php echo base_url() ?>index.php/tables/index'" /></td>
 		</tr>
 	</table>
+	<span class="fillerPadding"></span>
 <?php echo form_close(); ?>
+</div>
 
 </body>
 </html>

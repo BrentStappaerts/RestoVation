@@ -6,6 +6,10 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/stylesheets/styles.css"/>
+	<link href='http://fonts.googleapis.com/css?family=Berkshire+Swash&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+<!--
 <style>
 table, td, th
 {
@@ -13,8 +17,9 @@ border:1px solid green;
 }
 th
 {
-background-color:green;
+background-color: #16a085;
 color:white;
+	margin: 5px;
 }
 
 #infoMessage p{
@@ -27,8 +32,9 @@ color:white;
 	text-align: center;
 }
 </style>
+-->
 </head>
-<body>
+<body id="landingBody">
 <!-- Deze code bovenaan body plakken. Zie dat bootstrap gelinked is in de view -->
 
 <?php 
@@ -45,22 +51,34 @@ color:white;
    }
  ?>
  <!-- Navigatie code tot hier -->
-		<h2>Tafels</h2><br/>
-
-		<div id="infoMessage"><?php echo $message;?></div>
-       
-        <input name="New" type="button" value="Tafel toevoegen" onclick="window.location='addtable'" />
-
+ <div class="dashContainer" id="dashContainer1">
+		<h2>Tafels</h2>    
+		<?php
+			if (isset($message)) {
+			echo "<div class='message'>";
+			echo $message;
+			echo "</div>";
+			echo "<br>";
+			echo "<br>";
+			}
+		?>
+   <button name="New" type="button" value="Tafel toevoegen" onclick="window.location='addtable'">Tafel toevoegen</button>
 <form name="frmproduct" method="post">
 	<input type="hidden" name="rid" />
 	<input type="hidden" name="command" />
 	<table>
 		<tr>
-			<th><strong>Tafel ID</strong></th>
-			<th><strong>Nummer tafel</strong></th>
-			<th><strong>Aantal tafels</strong></th>
-			<th><strong>Bewerk</strong></th>
-			<th><strong>Verwijder</strong></th>
+			<th><strong>Tafel ID&nbsp;</strong>
+			</th>
+			<th><strong>&nbsp;Nummer tafel&nbsp;</strong>
+			</th>
+			<th><strong>&nbsp;Aantal tafels&nbsp;</strong>
+			</th>
+			<th><strong>&nbsp;Bewerk&nbsp;</strong>
+			</th>
+			<th><strong>&nbsp;Verwijder&nbsp;</strong>
+			</th>
+			<hr>
 		</tr>
 		<?php
 		foreach ($tables as $table){
@@ -77,10 +95,12 @@ color:white;
 					?>
 				</td>
 			</tr>
+			<hr>
 		<?php
 		}
 		?>
 	</table>
 </form>
+</div>
 </body>
 </html>
