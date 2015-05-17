@@ -6,7 +6,13 @@ parent::__Construct ();
    $this->load->database(); // load database
    $this->load->model('menu_model'); // load model
 }
- 
+
+function index()
+{
+    $this->load->model("menu_model");
+    $data['records'] = $this->menu_model->getAllRecords();
+    $this->load->view("menu/menu_read", $data);
+}
 
 function addDish()
 {
@@ -38,12 +44,5 @@ else
     $this->load->view('menu/menu_insert');
 }
 }    
-
-function allRecords()
-{
-    $this->load->model("menu_model");
-    $data['records'] = $this->menu_model->getAllRecords();
-    $this->load->view("menu/menu_read", $data);
-}
 }
 ?>
