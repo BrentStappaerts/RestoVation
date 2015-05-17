@@ -7,6 +7,9 @@
     <meta name="keywords" content="">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/stylesheets/styles.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+<!--
 <style>
 table, td, th
 {
@@ -28,8 +31,9 @@ color:white;
 	text-align: center;
 }
 </style>
+-->
 </head>
-<body>
+<body id="landingBody">
 <!-- Deze code bovenaan body plakken. Zie dat bootstrap gelinked is in de view -->
 
 <?php 
@@ -46,9 +50,8 @@ color:white;
    }
  ?>
  <!-- Navigatie code tot hier -->
+ <div id="dashContainer5" class="dashContainer">
 		<h2>Mijn Restaurants</h2><br/>
-
-		
        
  <a href="<?php echo site_url("restaurant_toevoegen_controller/voeg_toe");?>">Nog een restaurant toevoegen.</a>
 
@@ -71,12 +74,12 @@ color:white;
 			
 		?>
 			<tr>
-				<td><?php echo $resto['resto_id'] ?></td>
-				<td><?php echo $resto['restaurantnaam'] ?></td>
-				<td><?php echo $resto['adres'] ?></td>
-				<td><?php echo $resto['gemeente'] ?></td>
-				<td><?php echo $resto['postcode'] ?></td>
-				<td><?php echo $resto['telefoonnummer'] ?></td>
+				<td style="padding-left: 5px;"><?php echo $resto['resto_id'] ?></td>
+				<td style="padding-left: 5px;"><?php echo $resto['restaurantnaam'] ?></td>
+				<td style="padding-left: 5px;"><?php echo $resto['adres'] ?></td>
+				<td style="padding-left: 5px;"><?php echo $resto['gemeente'] ?></td>
+				<td style="padding-left: 5px;"><?php echo $resto['postcode'] ?></td>
+				<td style="padding-left: 5px;"><?php echo $resto['telefoonnummer'] ?></td>
 				
 			</tr>
 
@@ -86,5 +89,6 @@ color:white;
 		?>
 	</table>
 </form>
+	</div>
 </body>
 </html>

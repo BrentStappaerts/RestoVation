@@ -39,8 +39,19 @@
    }
  ?>
  <!-- Navigatie code tot hier -->
+ <div id="dashContainer3" class="dashContainer">
 <h2>Tafel bewerken</h2>
-<div id="infoMessage"><?php echo $message;?></div>
+<button style="display: inline-block; margin-right: 15px; width: 70px; margin-bottom: 15px;" type="button" name="btnBack" id="btnBack" value="Terug" onclick="window.location.href='<?php echo base_url() ?>index.php/tables/index'">Terug</button>
+
+<?php
+			if (isset($message)) {
+			echo "<div class='message'>";
+			echo $message;
+			echo "</div>";
+			echo "<br>";
+			echo "<br>";
+			}
+		?>
 
     <?php $id = $table['tafelid']; ?>
     <?php echo form_open("tables/edittable/$id");?>
@@ -56,11 +67,11 @@
             <tr>
                 <td>&nbsp;</td>
                 <td><?php echo form_submit('submit', 'Bewaar');?>
-                    <input type="button" name="btnBack" id="btnBack" value="Terug" onclick="window.location.href='<?php echo base_url() ?>index.php/tables/index'"/>
                 </td>
             </tr>
         </table>
     <?php echo form_close(); ?>
+    </div>
 </body>
 </html>
 </html>

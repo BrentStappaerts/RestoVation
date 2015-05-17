@@ -68,15 +68,15 @@ color:white;
 	<input type="hidden" name="command" />
 	<table>
 		<tr>
-			<th><strong>Tafel ID&nbsp;</strong>
+			<th style="font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 1.2em"><strong>Tafel ID&nbsp;</strong>
 			</th>
-			<th><strong>&nbsp;Nummer tafel&nbsp;</strong>
+			<th style="font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 1.2em"><strong>&nbsp;Nummer tafel&nbsp;</strong>
 			</th>
-			<th><strong>&nbsp;Aantal tafels&nbsp;</strong>
+			<th style="font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 1.2em"><strong>&nbsp;Aantal tafels&nbsp;</strong>
 			</th>
-			<th><strong>&nbsp;Bewerk&nbsp;</strong>
+			<th style="font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 1.2em"><strong>&nbsp;Bewerk&nbsp;</strong>
 			</th>
-			<th><strong>&nbsp;Verwijder&nbsp;</strong>
+			<th style="font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 1.2em"><strong>&nbsp;Verwijder&nbsp;</strong>
 			</th>
 			<hr>
 		</tr>
@@ -85,17 +85,16 @@ color:white;
 			$id = $table['tafelid'];
 		?>
 			<tr>
-				<td><?php echo $table['tafelid'] ?></td>
-				<td><?php echo $table['tafelnr'] ?></td>
-				<td><?php echo $table['aantal'] ?></td>
-				<td><a href='edittable/<?php echo $id ?>'>Bewerk</a></td>
-				<td>
+				<td style="padding-left: 5px;"><?php echo $table['tafelid'] ?></td>
+				<td style="padding-left: 5px;"><?php echo $table['tafelnr'] ?></td>
+				<td style="padding-left: 5px;"><?php echo $table['aantal'] ?></td>
+				<td style="padding-left: 5px;"><a href='edittable/<?php echo $id ?>'>Bewerk</a></td>
+				<td style="padding-left: 5px;">
 					<?php 
 						echo anchor('tables/deletetable/'.$id, 'Verwijder', array('onClick' => "return confirm('Zeker dat u deze tafel wilt verwijderen?')"));
 					?>
 				</td>
 			</tr>
-			<hr>
 		<?php
 		}
 		?>

@@ -4,6 +4,8 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/stylesheets/styles.css"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans+Condensed:300|Raleway' rel='stylesheet' type='text/css'/>
+<link href='http://fonts.googleapis.com/css?family=Berkshire+Swash&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
 
 </head>
 <body id="landingBody">
@@ -42,7 +44,7 @@ echo "<br>";
 ?>
 <div id="main">
 <div id="login">
-<h2>Inloggen:</h2>
+<h2 style="font-family: 'Berkshire Swash', cursive;">Inloggen:</h2>
 <?php echo form_open('user_authentication/user_login_process'); ?>
 <?php
 if (isset($error_message)) {

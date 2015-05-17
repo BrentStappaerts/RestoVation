@@ -27,24 +27,32 @@
    }
  ?>
  <!-- Navigatie code tot hier -->
- <div id="dashContainer1" class="dashCont">
-<h2>Tafels toevoegen</h2>
-<div id="infoMessage"><?php echo $message;?></div>
+ <div id="dashContainer2" class="dashContainer">
+<h2 >Tafels toevoegen</h2>
+<button style="display: inline-block; margin-right: 15px; width: 70px; margin-bottom: 15px;" type="button" name="btnBack" id="btnBack" value="Terug" onclick="window.location.href='<?php echo base_url() ?>index.php/tables/index'">Terug</button>
+<?php
+			if (isset($message)) {
+			echo "<div class='message'>";
+			echo $message;
+			echo "</div>";
+			echo "<br>";
+			echo "<br>";
+			}
+		?>
 <?php echo form_open("tables/addtable");?>
 	<table>
 		<tr>
 			<td>Nummer tafel</td>
-			<td><?php echo form_input($number);?></td>
+			<td class="inputsTable"><?php echo form_input($number);?></td>
 		</tr>
 		<tr>
 			<td>Aantal personen</td>
-			<td><?php echo form_input($amount); ?></td>
+			<td class="inputsTable"><?php echo form_input($amount); ?></td>
 		</tr>
-		
 		<tr>
 			<td>&nbsp;</td>
-			<td><?php echo form_submit('submit', 'Voeg toe');?><br/>
-				<input type="button" name="btnBack" id="btnBack" value="Terug" onclick="window.location.href='<?php echo base_url() ?>index.php/tables/index'" /></td>
+			<td class="inputsTableBtn"><?php echo form_submit('submit', 'Voeg toe');?><br/>
+				</td>
 		</tr>
 	</table>
 	<span class="fillerPadding"></span>

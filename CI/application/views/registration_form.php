@@ -4,6 +4,8 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/stylesheets/styles.css"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 <link rel="stylesheet" href="../resources/css/styles.css" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Berkshire+Swash&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
 
 </head>
 <body id="landingBody">
@@ -25,7 +27,7 @@
  <!-- Navigatie code tot hier -->
 <div id="main">
 <div id="login">
-<h2>Registreren:</h2>
+<h2 style="font-family: 'Berkshire Swash', cursive;">Registreren:</h2>
 
 <?php
 if (isset($message_display)) {
