@@ -60,12 +60,12 @@ color:white;
 	<input type="hidden" name="command" />
 	<table>
 		<tr>
-		<th><strong>ID</strong></th>
-			<th><strong>Naam</strong></th>
-			<th><strong>Adres</strong></th>
-			<th><strong>Gemeente</strong></th>
-			<th><strong>Postcode</strong></th>
-			<th><strong>Telefoonnummer</strong></th>
+		<th style="font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 1.4em"><strong>ID</strong></th>
+			<th style="font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 1.4em"><strong>Naam</strong></th>
+			<th style="font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 1.4em"><strong>Adres</strong></th>
+			<th style="font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 1.4em"><strong>Gemeente</strong></th>
+			<th style="font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 1.4em"><strong>Postcode</strong></th>
+			<th style="font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 1.4em"><strong>Telefoonnummer</strong></th>
 			
 		
 		</tr>

@@ -45,7 +45,8 @@
     <?php echo "<br>" ?>
     <?php echo "<br>" ?>
     <?php echo form_button(array('id' => 'submit', 'value' => 'Toevoegen', 'type'=>'submit', 'content'=>'Gerecht toevoegen'));?>
-    <?php echo form_close(); ?>  
+    <?php echo form_close(); ?> 
+    <button type="button" name="btnBack" id="btnBack" value="Terug" onclick="window.location.href='<?php echo base_url() ?>index.php/menu/index'">Terug</button> 
 	</div>
 </body>
 
