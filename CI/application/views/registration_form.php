@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="../resources/css/styles.css" type="text/css">
 
 </head>
-<body style="background-color: #9b59b6; !important">
+<body id="landingBody">
 <!-- Deze code bovenaan body plakken. Zie dat bootstrap gelinked is in de view -->
 
 <?php 

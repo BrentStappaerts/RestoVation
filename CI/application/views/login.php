@@ -45,20 +45,44 @@
          <nav class="navbar navbar-default">
              <div class="container-fluid">
                 <div class="navbar-header">
-                     <a class="navbar-brand" href="#">RestoVation</a>
+                     <a class="navbar-brand" href="#" style="font-family: 'Berkshire Swash', cursive; font-size: 2.3em; color: black;">RestoVation</a>
                 </div>
                           <ul class="nav navbar-nav navbar-right">
-                             <li>  <a href="<?=$user_profile['link']?>"><?=$user_profile['name']?></a></br></li>
-                             <li><a href="<?= $logout_url ?>">Logout</a> </li>
+                             <li><a href="<?= $user_profile['link']?>"><?=$user_profile['name']?></a></br></li>
+                             <li><a href="<?= $logout_url ?>" id="logoutAnch">Uitloggen</a> </li>
                           </ul>
              </div>
+                <form action="" method="post" id="form_reserveren">
+                <div class="padding">
+                <label for="date">Datum: </label>
+                <input type="text" placeholder="dd-mm-jjjj" id="date" name="date">
+                <label for="amountOfPeople">Aantal personen: </label>
+                <select name="amountOfPeople" id="amountOfPeople" style="height: 25px;">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <span>&nbsp;&nbsp;</span>
+                <button type="submit" id="controleer_btn">Controleren</button>
+                 </div><!-- end padding -->
+            </form>
 
 
             <div id="reserveren">
-                <a href="<?= $reserveer_url ?>">Reserveren</a>
+                <a href="<? $reserveer_url ?>">Reserveren</a>
+                <!--DIT IS DE ORIGINELE LINK, BOVENSTAANDE WAS VOOR CSS STYLING-->
+<!--                <a href="<?= $reserveer_url ?>">Reserveren</a>-->
                 <a href="http://www.igenerate.be">Reservatie bekijken</a>
             </div>
          </nav>
+<!--
             <form action="" method="post" id="form_reserveren">
                 <div class="padding">
                 <label for="date">Datum</label>
@@ -78,8 +102,9 @@
                     <option value="10">10</option>
                 </select>
                 <button type="submit" id="controleer_btn">Controleren</button>
-                 </div><!-- end padding -->
+                 </div> end padding 
             </form>
+-->
 
         <?php else: ?>
         <div id="landing">

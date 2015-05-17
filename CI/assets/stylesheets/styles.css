@@ -117,7 +117,7 @@
 
 #login button:hover
 {
-	background-color: blueviolet;
+	background-color: #16a085;
 	color: white;
 }
 
@@ -222,7 +222,8 @@
 }
 */
 
-#fbLandingLogin {
+#fbLandingLogin 
+{
   font-family: Arial;
   color: #ffffff;
   font-size: 19px;
@@ -235,7 +236,8 @@
 	margin-right: auto;
 }
 
-#fbLandingLogin:hover {
+#fbLandingLogin:hover 
+{
   background: #3cb0fd;
   background-image: url(../images/fbBtn_press.png);
 /*
@@ -252,4 +254,36 @@
 	color: white;
 	margin-left: 55px;
 }
+
+.padding
+{
+	margin-left: 15px;
+	margin-top: -19px;
+	margin-bottom: 10px;
 }
+
+.padding button
+{
+	outline: none;
+	height: 30px;
+	width: 135px;
+
+}
+
+.padding button:hover
+{
+	background-color: #16a085;
+	color: white;
+	border-style: none;
+}
+
+#logoutAnch
+{
+	margin-top: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #16a085;
+	color: white;
+	margin-right: 5px;
+}
+

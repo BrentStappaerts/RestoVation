@@ -6,7 +6,7 @@
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans+Condensed:300|Raleway' rel='stylesheet' type='text/css'/>
 
 </head>
-<body style="background-color: #9b59b6; !important">
+<body id="landingBody">
 
 <!-- Deze code bovenaan body plakken. Zie dat bootstrap gelinked is in de view -->
 <?php 
