@@ -93,7 +93,7 @@
 			<ul>
 				<li>Online zoeken van restaurants/tavernes in u buurt.</li>
 				<li>Gemakkelijk de beschikbare tafels controleren en reserveren.</li>
-				<li>Bestel u gerecht online, kom aan wanneer het klaar is.</li>
+				<li>Bestel uw gerecht online, kom aan wanneer het klaar is.</li>
 				<li>Slaag uw favoriete restaurants op onder uw favorieten.</li>
 				<li>Lees recencies, geef waarderingen en help de rest naar een lekkere hap!</li>
 			</ul>			
@@ -104,7 +104,7 @@
 			</div>
 			<h2>Eet smakelijk!</h3>
 			
-     		<p style="font-size: 0.799em";>Voor onze diensten voor restauranthouders of om in te loggen als restauranthouder, <a href="">klik</a> hier.<p>
+     		<p style="font-size: 0.799em";>Voor onze diensten voor restauranthouders of om in te loggen als restauranthouder, <a href="../user_authentication/user_login_show">klik</a> hier.<p>
       </div>
        </div>
         <?php endif; ?>
