@@ -64,10 +64,10 @@ $data = array(
 
 $result = $this->login_database->registration_insert($data) ;
 if ($result == TRUE) {
-$data['message_display'] = 'Registration Successfully !';
+$data['message_display'] = 'U werd succesvol geregistreerd!';
 $this->load->view('login_form', $data);
 } else {
-$data['message_display'] = 'Username already exist!';
+$data['message_display'] = 'Gebruikersnaam bestaat al!';
 $this->load->view('registration_form', $data);
 }
 }
@@ -114,7 +114,7 @@ $this->load->view('admin_page', $data);
 }
 }else{
 $data = array(
-'error_message' => 'Invalid Username or Password'
+'error_message' => 'Ongeldige gebruikersnaam of wachtwoord.'
 );
 $this->load->view('login_form', $data);
 }
@@ -129,7 +129,7 @@ $sess_array = array(
 'username' => ''
 );
 $this->session->unset_userdata('logged_in', $sess_array);
-$data['message_display'] = 'Successfully Logout';
+$data['message_display'] = 'U werd succesvol uitgelogd.';
 $this->load->view('login_form', $data);
 }
 }

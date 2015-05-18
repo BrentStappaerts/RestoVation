@@ -7,6 +7,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/stylesheets/styles.css"/>
 <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+<!--
 <style>
 
 #reserveer{
@@ -39,6 +40,7 @@
 
 
 </style>
+-->
 </head>
 
 <body id="landingBody">
@@ -59,7 +61,7 @@ if($this->session->userdata('__ci_last_regenerate'))
  ?>
  <!-- Navigatie code tot hier -->
 
-<div class="container" style="min-width: 560px; max-width: 560px;">
+<div class="container" style="min-width: 560px; max-width: 560px; padding-bottom: 15px;">
     <form>
         <?php if (@$user_profile): ?>
          <nav class="navbar navbar-default">
@@ -74,7 +76,7 @@ if($this->session->userdata('__ci_last_regenerate'))
 
                             
 </br></br>
-      <div id="reserveer">
+      <div id="reserveer" style="padding-bottom: 35px;">
         <h1 style="font-family: 'Yanone Kaffeesatz', sans-serif; margin-top:">Tafel reserveren</h1>
           <form action="" method="post">
             <label>Naam: </label>
@@ -96,7 +98,7 @@ if($this->session->userdata('__ci_last_regenerate'))
             <label>Aantal personen: </label>   
                 <input type="text" id="reservatie_aantal" name="tafel" placeholder="7" style="float: right;"></br>
                 <br>
-          <button type="submit" class="save">Reserveren</button>
+          <button type="submit" class="save" style="float: right;">Reserveren</button>
         </form>
       </div>
 

@@ -78,7 +78,7 @@ class Tables extends CI_Controller {
 			{
 				$this->table_model->updateTable($id, $data);
 
-				$this->session->set_flashdata('message', "<p>Tafel aangepast</p>");
+				$this->session->set_flashdata('message', "<p>Tafel aangepast.</p>");
 				
 				redirect(base_url().'index.php/tables/index');
 			}			
@@ -107,7 +107,7 @@ class Tables extends CI_Controller {
 	function deleteTable($id) {
 		$this->table_model->delTable($id);
 		
-		$this->session->set_flashdata('message', '<p>Tafel is verwijderd</p>');
+		$this->session->set_flashdata('message', '<p>Tafel werd verwijderd.</p>');
 		
 		redirect('tables/index');
 	}
