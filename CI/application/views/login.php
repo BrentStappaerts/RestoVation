@@ -51,61 +51,32 @@
                              <li><a href="<?= $user_profile['link']?>"><?=$user_profile['name']?></a></br></li>
                              <li><a href="<?= $logout_url ?>" id="logoutAnch">Uitloggen</a> </li>
                           </ul>
-             </div>
-                <form action="" method="post" id="form_reserveren">
-                <div class="padding">
-                <label for="date">Datum: </label>
-                <input type="text" placeholder="dd-mm-jjjj" id="date" name="date">
-                <label for="amountOfPeople">Aantal personen: </label>
-                <select name="amountOfPeople" id="amountOfPeople" style="height: 25px;">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
-                <span>&nbsp;&nbsp;</span>
-                <button type="submit" id="controleer_btn">Controleren</button>
-                 </div><!-- end padding -->
-            </form>
 
 
-            <div id="reserveren">
-                <a href="<?= $reserveer_url ?>">Reserveren</a>
-                <!--DIT IS DE ORIGINELE LINK, BOVENSTAANDE WAS VOOR CSS STYLING-->
-<!--                <a href="<?= $reserveer_url ?>">Reserveren</a>-->
-                <a href="http://www.igenerate.be">Reservatie bekijken</a>
-            </div>
-         </nav>
-<!--
-            <form action="" method="post" id="form_reserveren">
-                <div class="padding">
-                <label for="date">Datum</label>
-                <input type="text" placeholder="dd-mm-jjjj" id="date" name="date">
-            
-                <label for="amountOfPeople">Aantal personen</label>
-                <select name="amountOfPeople" id="amountOfPeople">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
-                <button type="submit" id="controleer_btn">Controleren</button>
-                 </div> end padding 
-            </form>
--->
-        	</div>
+        <div class='alert' style="display: none;"></div>
+				<tr>
+					<th style="width: 20%;">Naam</th>
+					<th style="width: 3%;">Personen</th>
+					<th style="width: 15%;">Datum</th>
+					<th style="width: 10%;">Uur</th>
+					<th>Tafelnr</th>
+					<th class="nopadding">
+						<a href="#" class="btn_toevoegen">Toevoegen</a>
+					</th>
+					
+				</tr>
+				
+				<tr id="inputs_toevoegen">
+					<form action="" method="post">
+					<td><input type="text" id="reservatie_name" name="name"></td>
+					<td><input type="text" id="reservatie_personen" name="personen"></td>
+					<td><input type="text" id="reservatie_datum" name="datum" placeholder="dd-mm-jjjj"></td>
+					<td><input type="text" id="reservatie_uur" name="uur"></td>
+					<td><input type="text" id="reservatie_tafel" name="tafel"></td>
+					<th class="nopadding white"><button type="submit" class="save"></button></th>
+				</form>
+				</tr>
+    </div>
 
         <?php else: ?>
         <div id="landing">
