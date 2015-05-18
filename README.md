@@ -12,7 +12,7 @@ Team leden:
 - Robin Willekens
 - Tom Vanderheyden
 
-*Inlogdata:
-username: dummy
-passwoord: dummy
+Inlogdata:
+-username: dummy
+-passwoord: dummy
 
