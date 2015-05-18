@@ -2,7 +2,7 @@
 class restaurant_toevoegen_model extends CI_Model{
     function __construct() {
 
-    	$this->load->database();
+        $this->load->database();
         $this->load->library('session');
         $this->load->helper('url');
 
@@ -15,12 +15,19 @@ class restaurant_toevoegen_model extends CI_Model{
     }
 
 
-	function getAll() {
-		$this->db->select('resto_id, restaurantnaam, adres, gemeente, postcode, telefoonnummer');
-		$query = $this->db->get('tbl_restaurant');
+    function getAll() {
+//nog filteren op restaurant id
+$condition = "id =" . "'" . $this->session->userdata('logged_in')['id']. "'";
 
-		return $query->result_array();
-	}
+
+
+        $this->db->select('resto_id, restaurantnaam, adres, gemeente, postcode, telefoonnummer');
+        $this->db->from('tbl_restaurant');
+        $this->db->where($condition);
+        $query = $this->db->get();
+
+        return $query->result_array();
+    }
 
 
 
