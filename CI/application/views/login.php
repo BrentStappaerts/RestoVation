@@ -8,15 +8,35 @@
 <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
 <style>
-  body {background-color: #9b59b6;}
 
-  #reserveren {background-color: #808080;
-                padding: 10px;}
+#reserveer{
+  padding: 10px;
+}
 
-  #reserveren a {color: white;
-                 font-weight: bold;
-                 text-decoration: none;
-                 padding-left: 20px;}
+#reservatie_name{
+  margin-left: 84px;
+}
+
+#reservatie_phone{
+  margin-top: 10px;
+  margin-left: 10px;
+}
+#reservatie_datum{
+  margin-top: 10px;
+  margin-left: 80px;
+}
+#reservatie_uur{
+  margin-top: 10px;
+  margin-left: 76px;
+}
+#reservatie_aantal{
+  margin-top: 10px;
+  margin-left: 14px;
+}
+.save{
+  margin-top: 10px;
+}
+
 
 </style>
 </head>
@@ -25,10 +45,10 @@
 <!-- Deze code bovenaan body plakken. Zie dat bootstrap gelinked is in de view -->
 
 <?php 
- if(null !==($this->session->userdata('logged_in')))
+if($this->session->userdata('__ci_last_regenerate'))
    {
      
-     include_once(APPPATH.'/views/AdminNav.php');//Als admin ingelogged is deze menu tonen.
+     include_once(APPPATH.'/views/MainNav.php');//Als klant ingelogged is deze menu tonen.
    
    }
    else
@@ -39,44 +59,47 @@
  ?>
  <!-- Navigatie code tot hier -->
 
-<div class="container">
+<div class="container" style="min-width: 560px; max-width: 560px;">
     <form>
         <?php if (@$user_profile): ?>
          <nav class="navbar navbar-default">
              <div class="container-fluid">
                 <div class="navbar-header">
-                     <a class="navbar-brand" href="#" style="font-family: 'Berkshire Swash', cursive; font-size: 2.3em; color: black;">RestoVation</a>
+                     <a class="navbar-brand" href="#" style="font-family: 'Berkshire Swash', cursive; font-size: 2.3em; color: black; mùrgin-bottom: -10px;">RestoVation</a>
                 </div>
                           <ul class="nav navbar-nav navbar-right">
                              <li><a href="<?= $user_profile['link']?>"><?=$user_profile['name']?></a></br></li>
                              <li><a href="<?= $logout_url ?>" id="logoutAnch">Uitloggen</a> </li>
                           </ul>
 
+                            
+</br></br>
+      <div id="reserveer">
+        <h1 style="font-family: 'Yanone Kaffeesatz', sans-serif; margin-top:">Tafel reserveren</h1>
+          <form action="" method="post">
+            <label>Naam: </label>
+                <span style="float: right;"><?=$user_profile['name']?></span>
+                <br>
+			<label for="" style="margin-top: -5px; padding-bottom: 5px; font-size: 0.7em; color: grey;">(Reservaties gebeuren <b>altijd</b> op uw naam.)</label>
+                 </br>
+            <label>Telefoonnummer: </label>
+                <input type="int" id="reservatie_phone" name="datum" placeholder="0497719633" style="float: right;">
+                </br>
+                <br>
+            <label>Datum: </label>
+                <input type="text" id="reservatie_datum" name="datum" placeholder="dd-mm-jjjj" style="float: right;">
+                </br>
+                <br>
+            <label>Tijdstip: </label>   
+                <input type="text" id="reservatie_uur" name="uur" placeholder="13:00" style="float: right;"></br>
+                <br>
+            <label>Aantal personen: </label>   
+                <input type="text" id="reservatie_aantal" name="tafel" placeholder="7" style="float: right;"></br>
+                <br>
+          <button type="submit" class="save">Reserveren</button>
+        </form>
+      </div>
 
-        <div class='alert' style="display: none;"></div>
-				<tr>
-					<th style="width: 20%;">Naam</th>
-					<th style="width: 3%;">Personen</th>
-					<th style="width: 15%;">Datum</th>
-					<th style="width: 10%;">Uur</th>
-					<th>Tafelnr</th>
-					<th class="nopadding">
-						<a href="#" class="btn_toevoegen">Toevoegen</a>
-					</th>
-					
-				</tr>
-				
-				<tr id="inputs_toevoegen">
-					<form action="" method="post">
-					<td><input type="text" id="reservatie_name" name="name"></td>
-					<td><input type="text" id="reservatie_personen" name="personen"></td>
-					<td><input type="text" id="reservatie_datum" name="datum" placeholder="dd-mm-jjjj"></td>
-					<td><input type="text" id="reservatie_uur" name="uur"></td>
-					<td><input type="text" id="reservatie_tafel" name="tafel"></td>
-					<th class="nopadding white"><button type="submit" class="save"></button></th>
-				</form>
-				</tr>
-    </div>
 
         <?php else: ?>
         <div id="landing">
