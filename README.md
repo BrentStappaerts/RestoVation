@@ -11,3 +11,8 @@ Team leden:
 - Tijs Vervoort
 - Robin Willekens
 - Tom Vanderheyden
+
+*Inlogdata:
+username: dummy
+passwoord: dummy
+
