@@ -36,7 +36,8 @@ class Restos extends CI_Controller {
                 'adres'		    => $this->input->post('adres'),
                 'gemeente'		=> $this->input->post('gemeente'),
                 'postcode'		=> $this->input->post('postcode'),
-				'telefoonnummer'=> $this->input->post('telefoonnummer')
+				'telefoonnummer'=> $this->input->post('telefoonnummer'),
+				'id'=>$this->session->userdata('logged_in')['id']
 			);
 			
 			$this->resto_model->insertResto($data);

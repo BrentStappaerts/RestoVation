@@ -10,10 +10,13 @@ class Resto_model extends CI_Model {
 	}
 
 	function getAll() {
-		$this->db->select('resto_id, restaurantnaam, adres, gemeente, postcode, telefoonnummer, id');
-		$query = $this->db->get('tbl_restaurant');
+		$condition = "id =" . "'" . $this->session->userdata('logged_in')['id']. "'";
 
-		return $query->result_array();
+		$this->db->from('tbl_restaurant');
+        $this->db->where($condition);
+        $query = $this->db->get();
+
+        return $query->result_array();
 	}
 	
 	function getResto($id) {

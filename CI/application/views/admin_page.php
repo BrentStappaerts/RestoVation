@@ -28,7 +28,7 @@
  <div class="dashContainer">
 <div id="profile">
 <?php
-echo "<h2 style='text-align: center;'>Hallo, " .$name ."</h2>";
+echo "<h2 style='text-align: center;'>Hallo, " .$username ."</h2>";
 echo "<p>Welkom bij RestoVation!". "</p>"; 
 //echo "<p>Gebruik bovenstaande menu om je restaurant te beheren.". "</p>"; 
 //echo "<p>Bewerk je menu.". "</p>"; 
